@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../Content/css/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="../Content/less/datepicker.less" rel="stylesheet">
+    <link href="../Content/css/jquery-ui.custom.css" rel="stylesheet" type="text/css">
+    <link href="../Morris/morris.css" rel="stylesheet">
+    <link href="../Content/less/override.less" rel="stylesheet" type="text/less">
+  </head>
+  <body>
+    <!-- page start -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="menu-button menu-red page">
+          <a class="menu-link" href="index.html">
+            <img src="Content/images/menu-link.png">
+          </a>
+          <div class="button-image">
+            <img src="Content/images/quality-header.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8">
+          <div class="chart menu-orange">
+            <div id="costofrework"></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="chart-side">
+            <span>Cost of Rework: This month the labour budget variance results show that...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8">
+          <div class="chart menu-red">
+            <div id="numberofimprovedrequests"></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="chart-side">
+            <span>Number of Improved Requests, Raised and Closed: This month the labour budget variance results show that...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8">
+          <div class="chart menu-green">
+            <div id="hoursspentonrework"></div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="chart-side">
+            <span>Hours Spent on Rework: This month the labour budget variance results show that...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page end -->
+
+     <script src="../Scripts/js/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/js/bootstrap.min.js"></script>
+    <script src="../Scripts/js/less.js" type="text/javascript"></script>
+    <script src="../Scripts/js/bootstrap-select.js"></script>
+    <script src="../Scripts/js/bootstrap-datepicker.js"></script>
+    <script src="../Scripts/js/jquery-ui.custom.js"></script>
+    <script src="../Scripts/js/timepicker.js"></script>
+    <script src="../Scripts/js/raphael.js"></script>
+    <script src="../Morris/morris.min.js"></script>
+  </body>
+
+  <script>
+  new Morris.Line({
+    element: 'costofrework',
+    data: [
+    {year: '2008', value: 10 },
+    {year: '2009', value: 20 },
+    {year: '2010', value: 50 },
+    {year: '2011', value: 2 },
+    {year: '2012', value: 20 }
+    ],
+    xkey: 'year',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+
+  new Morris.Line({
+    element: 'numberofimprovedrequests',
+    data: [
+    {year: '2008', value: 20 },
+    {year: '2009', value: 1 },
+    {year: '2010', value: 5 },
+    {year: '2011', value: 5 },
+    {year: '2012', value: 40 }
+    ],
+    xkey: 'year',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+
+  new Morris.Line({
+    element: 'hoursspentonrework',
+    data: [
+    {year: '2008', value: 20 },
+    {year: '2009', value: 1 },
+    {year: '2010', value: 5 },
+    {year: '2011', value: 5 },
+    {year: '2012', value: 40 }
+    ],
+    xkey: 'year',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+  </script>
+</html>
